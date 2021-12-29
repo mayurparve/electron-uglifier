@@ -1,0 +1,50 @@
+{
+    "author": {
+        "name": "Mayur Parve"
+    },
+    "bin": {
+        "electron-compiler": "main.js"
+    },
+    "bugs": {
+        "url": "https://github.com/mayurparve/electron-uglifier/issues"
+    },
+    "bundleDependencies": false,
+    "dependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-babili": "0.0.8",
+        "babel-preset-latest": "^6.16.0",
+        "colors": "^1.4.0",
+        "electron-packager": "^15.4.0",
+        "fs-extra": "^10.0.0",
+        "js-beautify": "^1.14.0",
+        "minifier": "^0.8.0",
+        "pkginfo": "^0.4.1",
+        "prompt": "^1.2.0",
+        "remove-empty-directories": "0.0.1",
+        "zip-folder": "^1.0.0"
+    },
+    "deprecated": false,
+    "description": "Uglifier for Electron projects.",
+    "homepage": "https://github.com/mayurparve/electron-uglifier",
+    "keywords": [
+        "electron",
+        "uglifier",
+        "electron-uglifier",
+        "compile",
+        "uglify",
+        "minify",
+        "packager",
+        "electron-packager"
+    ],
+    "license": "ISC",
+    "main": "main.js",
+    "name": "electron-uglifier",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mayurparve/electron-uglifier.git"
+    },
+    "scripts": {
+        "start": "node main.js"
+    },
+    "version": "1.0.0"
+}
