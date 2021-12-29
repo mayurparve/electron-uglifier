@@ -3,7 +3,7 @@
         "name": "Mayur Parve"
     },
     "bin": {
-        "electron-compiler": "main.js"
+        "electron-uglifier": "main.js"
     },
     "bugs": {
         "url": "https://github.com/mayurparve/electron-uglifier/issues"
