@@ -384,6 +384,10 @@ function uglifyFile(filePath) {
             cmd = minifyPath + " " + filePath + " --output " + filePath;
             break;
 
+        case ".html":
+            cmd = minifyPath + " " + filePath + " --output " + filePath;
+            break;
+
         default:
             logError("%s cannot be uglified.", filePath);
             return false;
