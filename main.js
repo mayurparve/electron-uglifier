@@ -377,15 +377,15 @@ function uglifyFile(filePath) {
 
     switch (path.parse(filePath).ext) {
         case ".js":
-            cmd = babelPath + " " + filePath + " --out-file " + filePath + " --presets babili";
+            cmd = "minify " + filePath + " > " + filePath + " --presets babili";
             break;
 
         case ".css":
-            cmd = minifyPath + " " + filePath + " --output " + filePath;
+            cmd = "minify " + filePath + " > " + filePath;
             break;
 
         case ".html":
-            cmd = minifyPath + " " + filePath + " --output " + filePath;
+            cmd = "minify " + filePath + " > " + filePath;
             break;
 
         default:
