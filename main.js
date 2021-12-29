@@ -378,7 +378,7 @@ function uglifyFile(filePath) {
 
     switch (path.parse(filePath).ext) {
         case ".js":
-            cmd = babelPath + " " + filePath + " --out-file " + filePath + " --presets babili";
+            cmd = babelPath + " " + filePath + " --out-file " + filePath;
             break;
 
         case ".css":
