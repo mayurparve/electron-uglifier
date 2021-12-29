@@ -17,8 +17,8 @@ const node_modules = require('node_modules-path');
 var appDir = "./interim/";
 var releasesDir = "./releases";
 
-var babelPath = path.normalize(path.join(node_modules()), ".bin/babel");
-var minifyPath = path.normalize(path.join(node_modules()), ".bin/minify");
+var babelPath = path.normalize(path.join(node_modules(), ".bin/babel"));
+var minifyPath = path.normalize(path.join(node_modules(), ".bin/minify"));
 
 var repoDir = "";
 var configPath = "";
