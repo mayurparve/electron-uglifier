@@ -12,12 +12,13 @@ var pkgInfo = require('pkginfo')(module);
 var packager = require("electron-packager");
 var beautify = require("js-beautify").js_beautify;
 var removeEmptyDirs = require("remove-empty-directories");
+const node_modules = require('node_modules-path');
 
 var appDir = "./interim/";
 var releasesDir = "./releases";
 
-var babelPath = path.normalize("node_modules/.bin/babel");
-var minifyPath = path.normalize("node_modules/.bin/minify");
+var babelPath = path.normalize(path.join(node_modules()), ".bin/babel");
+var minifyPath = path.normalize(path.join(node_modules()), ".bin/minify");
 
 var repoDir = "";
 var configPath = "";
@@ -381,10 +382,6 @@ function uglifyFile(filePath) {
             break;
 
         case ".css":
-            cmd = minifyPath + " " + filePath + " --output " + filePath;
-            break;
-
-        case ".html":
             cmd = minifyPath + " " + filePath + " --output " + filePath;
             break;
 

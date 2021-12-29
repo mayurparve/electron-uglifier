@@ -19,6 +19,7 @@
         "js-beautify": "^1.14.0",
         "minifier": "^0.8.0",
         "minify": "^8.0.3",
+        "node_modules-path": "^2.0.5",
         "pkginfo": "^0.4.1",
         "prompt": "^1.2.0",
         "remove-empty-directories": "0.0.1",
@@ -47,5 +48,5 @@
     "scripts": {
         "start": "node main.js"
     },
-    "version": "1.0.4"
+    "version": "1.0.5"
 }
