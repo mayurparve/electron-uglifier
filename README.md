@@ -12,7 +12,7 @@ Copy, uglify, minify and package [Electron](http://electron.atom.io) projects.
 
 ## Installation
 
-    npm install electron-uglifier
+    npm install electron-uglifier -g (make sure to install globally)
 
 ## Usage
 
@@ -22,29 +22,40 @@ Copy, uglify, minify and package [Electron](http://electron.atom.io) projects.
 
 uglifier options are read from an electron_uglifier.json file in the application's repository.
 
-    {
-        "verifyConfig": true | false, // Whether to verify configuration before starting build. (Default: true)
-        "archiveOutput": true | false, // Whether to archive electron packager output for Windows and Linux. (Default: true)
-        "platforms": [], // Array or platforms to compile for. Supported options: win32, linux, darwin
-        "arch": "", // Architecture options Windows (also known as win32, for x86, x86_64, and arm64 architectures), macOS (also known as darwin) / Mac App Store (also known as mas)* (for x86_64 and arm64 architectures), Linux (for x86, x86_64, armv7l, arm64, and mips64el architectures).
-        "uglifyList": [], // Array of paths to uglify. JavaScript and CSS files are supported (use / for directory e.g. app/).
-        "ignoreList": [], // Array of files to ignore (use / for directory e.g. app/). 
-        "versionString": { // Object containing electron packager settings for Windows build.
-            "CompanyName": "Company",
-            "FileDescription": "Application description.",
-            "OriginalFilename": "Filename.exe",
-            "ProductName": "Product",
-            "InternalName": "Internal Name"
-        }
+{
+    "verifyConfig": true | false, // Whether to verify configuration before starting build. (Default: true)
+    "archiveOutput": true | false, // Whether to archive electron packager output for Windows and Linux. (Default: true)
+    "platforms": [], // Array or platforms to compile for. Supported options: win32, linux, darwin
+    "arch": "", // Architecture options Windows (also known as win32, for x86, x86_64, and arm64 architectures), macOS (also known as darwin) / Mac App Store (also known as mas)* (for x86_64 and arm64 architectures), Linux (for x86, x86_64, armv7l, arm64, and mips64el architectures).
+    "uglifyList": [], // Array of paths to uglify. JavaScript and CSS files are supported (use / for directory e.g. app/).
+    "ignoreList": [], // Array of files to ignore (use / for directory e.g. app/). 
+    "versionString": { // Object containing electron packager settings for Windows build.
+        "CompanyName": "Company",
+        "FileDescription": "Application description.",
+        "OriginalFilename": "Filename.exe",
+        "ProductName": "Product",
+        "InternalName": "Internal Name"
     }
-
-## Output
-
-The uglifier temporary files are saved to .\app.
+}
 
 ## Output
 
 The uglifier output of each platform from electron-packager is saved to .\releases.
+
+## Sample Structure
+
+|-- app //can be any custom name
+    |-- //Your application code here
+    |-- electron_uglifier.json
+|-- interim //The uglifier temporary files are saved to .\interim.
+|-- releases //The uglifier output of each platform from electron-packager is saved to .\releases.
+
+## How to run
+
+Open Command prompt or Terminal and run
+
+electron-uglifier app 
+//app will your application directory
 
 ## Third Party Libraries
 

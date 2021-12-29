@@ -13,7 +13,7 @@ var packager = require("electron-packager");
 var beautify = require("js-beautify").js_beautify;
 var removeEmptyDirs = require("remove-empty-directories");
 
-var appDir = "./app/";
+var appDir = "./interim/";
 var releasesDir = "./releases";
 
 var babelPath = path.normalize("node_modules/.bin/babel");
