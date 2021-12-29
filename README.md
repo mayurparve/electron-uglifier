@@ -12,7 +12,7 @@ Copy, uglify, minify and package [Electron](http://electron.atom.io) projects.
 
 ## Installation
 
-    npm install electron-uglifier
+    npm install electron-uglifier -g (make sure to install globally)
 
 ## Usage
 
